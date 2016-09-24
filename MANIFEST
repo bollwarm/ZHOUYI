@@ -1,0 +1,15 @@
+Changes
+example/YI
+example/zypm.pl
+ignore.txt
+lib/ZHOUYI.pm
+Makefile.PL
+MANIFEST			This list of files
+README
+t/00-load.t
+t/manifest.t
+t/pod-coverage.t
+t/pod.t
+xt/boilerplate.t
+YI
+ZhouYi
