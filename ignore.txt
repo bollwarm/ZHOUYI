@@ -9,6 +9,7 @@ _build/
 cover_db/
 blib/
 inc/
+.git/
 .lwpcookies
 .last_cover_stats
 nytprof.out

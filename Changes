@@ -1,5 +1,7 @@
 Revision history for ZHOUYI
 
-0.01    Date/time
+0.03    2016-09-24/15/22
+        Add YIdb to module's _DATA_ 
+0.01    2016-09-24/15
         First version, released on an unsuspecting world.
 
