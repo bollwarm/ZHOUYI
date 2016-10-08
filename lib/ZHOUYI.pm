@@ -6,7 +6,7 @@ use strict;
 use warnings;
 
 our @ISA     = qw(Exporter);
-our @EXPORT  = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang);
+our @EXPORT  = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao);
 
 =head1 NAME
 
@@ -15,11 +15,11 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
-Version 0.01
+Version 0.05
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.05';
 
 
 =head1 SYNOPSIS
@@ -43,7 +43,9 @@ if you don't export anything, such as for a purely object-oriented module.
 =head1 SUBROUTINES/METHODS
 
 =cut
-
+my $ZYdb;
+my @ZYdb=<DATA>;
+$ZYdb.=$_ for @ZYdb;
 sub ZYindex {
     my ( $wgua, $ngua ) = @_;
     $wgua %= 8;
@@ -64,18 +66,14 @@ sub ZYindex {
 sub ZhouyiEx {
     my ( @line, $msg );
     my  $n = shift;
-    {
-        local $/ = "";
-        for (<DATA>) {
-            @line = split /^\s+$/sm;
-        }
-    }
+    @line = split /^\s+$/sm ,$ZYdb;
     my $i;
     for (@line) {
         $i++;
         $msg .= "$_\n" if $i == 2 * $n;
         $msg .= "$_\n" if $i == 2 * $n + 1;
     }
+
     return $msg;
 
 }
@@ -98,6 +96,17 @@ sub sixyao {
         $omsg .= $_."\n";
     }
     return $omsg;
+}
+sub maixyao {
+    my ($msg,$yao) = @_;
+    my @guatext = split /\n/sm, $msg;
+    my @yaoci;
+    for (@guatext) {
+        next if /^$/;
+        next unless  /^(初|六|九|上|用).：/;
+        push @yaoci,$_;
+    }
+    return ($yaoci[$yao],\@yaoci);
 }
 
 sub outtuan {
