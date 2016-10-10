@@ -5,8 +5,8 @@ use utf8;
 use strict;
 use warnings;
 
-our @ISA     = qw(Exporter);
-our @EXPORT  = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao);
+our @ISA    = qw(Exporter);
+our @EXPORT = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao);
 
 =head1 NAME
 
@@ -15,20 +15,11 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
-<<<<<<< HEAD
 Version 0.07
 
 =cut
 
 our $VERSION = '0.07';
-=======
-Version 0.05
-
-=cut
-
-our $VERSION = '0.05';
->>>>>>> bc6cc83fa05d3d96bd23a1fd162ff24f667b9f03
-
 
 =head1 SYNOPSIS
 
@@ -51,9 +42,46 @@ if you don't export anything, such as for a purely object-oriented module.
 =head1 SUBROUTINES/METHODS
 
 =cut
-my $ZYdb;
-my @ZYdb=<DATA>;
-$ZYdb.=$_ for @ZYdb;
+
+my ( $ZYdb, @ZYdb );
+@ZYdb = <DATA>;
+$ZYdb .= $_ for @ZYdb;
+
+sub Bindex {
+    my ( @yigua, %yi, %zy, @bagua, @bagua1,@bgindex,@num);
+
+    @bagua  = qw(kun zhen kan dui gen li xun qian);
+    @bagua1 = qw(di lei shui ze shan huo feng tian);
+    @bgindex =
+      qw(tian_tian tian_ze tian_huo tian_lei tian_feng tian_shui tian_shan tian_di ze_tian ze_ze ze_huo ze_lei ze_feng ze_shui ze_shan ze_di huo_tian huo_ze huo_huo huo_lei huo_feng huo_shui huo_shan huo_di lei_tian lei_ze lei_huo lei_lei lei_feng lei_shui lei_shan lei_di feng_tian feng_ze feng_huo feng_lei feng_feng feng_shui feng_shan feng_di shui_tian shui_ze shui_huo shui_lei shui_feng shui_shui shui_shan shui_di shan_tian shan_ze shan_huo shan_lei shan_feng shan_shui shan_shan shan_di di_tian di_ze di_huo di_lei di_feng di_shui di_shan di_di);
+    @num =
+      qw(1 10 13 25 44 6 33 12 43 58  49 17 28 47 31 45 14 38 30 21 50 64 56 35 34 54 55 51 32 40 62 16 9 61 37 42 57 59 53 20 5 60 63 3 48 29 39 8 26 41 21 27 18 4 52 23 11 19 36 24 46 7 15 2);
+
+    @zy{@bgindex} = @num;
+    for ( 0 .. 63 ) {
+
+        my $zindexs = sprintf( "%lo", $_ );
+        push @yigua, $zindexs;
+    }
+
+    for (@yigua) {
+
+        if (/^\d$/) {
+
+            #print $_,"\n";
+            $yi{$_} = $bagua1[0] . "_" . $bagua1[$_];
+
+        }
+        else {
+            my ( $q, $k ) = split //, $_;
+            $yi{$_} = $bagua1[$q] . "_" . $bagua1[$k];
+        }
+
+    }
+
+    return ( \%zy, \%yi );
+}
+
 sub ZYindex {
     my ( $wgua, $ngua ) = @_;
     $wgua %= 8;
@@ -73,8 +101,8 @@ sub ZYindex {
 
 sub ZhouyiEx {
     my ( @line, $msg );
-    my  $n = shift;
-    @line = split /^\s+$/sm ,$ZYdb;
+    my $n = shift;
+    @line = split /^\s+$/sm, $ZYdb;
     my $i;
     for (@line) {
         $i++;
@@ -87,9 +115,9 @@ sub ZhouyiEx {
 }
 
 sub outGua {
-    my $msg     = shift;
+    my $msg = shift;
     my @guatext = split /\n/sm, $msg;
-    my $omsg.=$guatext[1]."\n\n".$guatext[4]."\n\n";
+    my $omsg .= $guatext[1] . "\n\n" . $guatext[4] . "\n\n";
     return $omsg;
 }
 
@@ -97,24 +125,25 @@ sub sixyao {
     my $msg = shift;
     my @guatext = split /\n/sm, $msg;
     my $omsg;
-    $omsg .=outGua($msg);
+    $omsg .= outGua($msg);
     for (@guatext) {
         next if /^$/;
-        next unless  /^(初|六|九|上|用).：/;
-        $omsg .= $_."\n";
+        next unless /^(初|六|九|上|用).：/;
+        $omsg .= $_ . "\n";
     }
     return $omsg;
 }
+
 sub maixyao {
-    my ($msg,$yao) = @_;
+    my ( $msg, $yao ) = @_;
     my @guatext = split /\n/sm, $msg;
     my @yaoci;
     for (@guatext) {
         next if /^$/;
-        next unless  /^(初|六|九|上|用).：/;
-        push @yaoci,$_;
+        next unless /^(初|六|九|上|用).：/;
+        push @yaoci, $_;
     }
-    return ($yaoci[$yao],\@yaoci);
+    return ( $yaoci[$yao], \@yaoci );
 }
 
 sub outtuan {
@@ -122,11 +151,11 @@ sub outtuan {
     my $msg = shift;
     my @guatext = split /\n/sm, $msg;
     my $omsg;
-    $omsg .=outGua($msg);
+    $omsg .= outGua($msg);
     for (@guatext) {
         next if /^$/;
         next unless /《彖》/;
-        $omsg .= $_."\n";
+        $omsg .= $_ . "\n";
     }
     return $omsg;
 
@@ -136,15 +165,16 @@ sub outxiang {
     my $msg = shift;
     my @guatext = split /\n/sm, $msg;
     my $omsg;
-    $omsg .=outGua($msg);
+    $omsg .= outGua($msg);
     for (@guatext) {
         next if /^$/;
         next unless /《象》/;
-        $omsg .= $_."\n";
+        $omsg .= $_ . "\n";
     }
     return $omsg;
 
 }
+
 =head1 AUTHOR
 
 orange, C<< <bollwarm at ijz.me> >>
@@ -200,7 +230,8 @@ under the terms of the the Artistic License (2.0).
 
 =cut
 
-1; 
+1;
+
 # End of ZHOUYI
 
 __DATA__
