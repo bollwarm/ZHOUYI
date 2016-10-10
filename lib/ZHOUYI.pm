@@ -15,11 +15,11 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
-Version 0.05
+Version 0.07
 
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.07';
 
 
 =head1 SYNOPSIS
@@ -139,7 +139,7 @@ sub outxiang {
 }
 =head1 AUTHOR
 
-orange, C<< <linzhe at ijz.me> >>
+orange, C<< <bollwarm at ijz.me> >>
 
 =head1 BUGS
 

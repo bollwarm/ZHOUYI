@@ -1,5 +1,7 @@
 Revision history for ZHOUYI
 
+0.07    2016-10-10/10/
+ some changes of inner functions 
 0.05    2016-10-08/16/
         Add a array  storage YI data to avoid only can  access one info once.
 0.03    2016-09-24/22

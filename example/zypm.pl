@@ -4,7 +4,6 @@ binmode STDOUT, ":utf8";
 
 
 my ( $num1, $mum2 )=@ARGV;
-#print "$num1 $mum2";
 
 my $reply = ZhouyiEx( ZYindex( $mum2, $num1 ));
 my $reply1=outGua($reply);

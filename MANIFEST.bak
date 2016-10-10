@@ -1,5 +1,4 @@
 Changes
-example/YI
 example/zypm.pl
 ignore.txt
 lib/ZHOUYI.pm
@@ -12,5 +11,3 @@ t/manifest.t
 t/pod-coverage.t
 t/pod.t
 xt/boilerplate.t
-YI
-ZhouYi
