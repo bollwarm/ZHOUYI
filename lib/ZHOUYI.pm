@@ -15,11 +15,19 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
+<<<<<<< HEAD
 Version 0.07
 
 =cut
 
 our $VERSION = '0.07';
+=======
+Version 0.05
+
+=cut
+
+our $VERSION = '0.05';
+>>>>>>> bc6cc83fa05d3d96bd23a1fd162ff24f667b9f03
 
 
 =head1 SYNOPSIS
