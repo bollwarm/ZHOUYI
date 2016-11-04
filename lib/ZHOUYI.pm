@@ -6,7 +6,7 @@ use strict;
 use warnings;
 
 our @ISA    = qw(Exporter);
-our @EXPORT = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao);
+our @EXPORT = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao maixiang);
 
 =head1 NAME
 
@@ -19,7 +19,7 @@ Version 0.07
 
 =cut
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 SYNOPSIS
 
@@ -173,6 +173,18 @@ sub outxiang {
     }
     return $omsg;
 
+}
+
+sub maixiang {
+    my ( $msg, $yao ) = @_;
+    my @guatext = split /\n/sm, $msg;
+    my @yaoci;
+    for (@guatext) {
+        next if /^$/;
+        next unless /《象》/;
+        push @yaoci, $_;
+    }
+    return ( $yaoci[$yao+1], \@yaoci );
 }
 
 =head1 AUTHOR

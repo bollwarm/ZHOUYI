@@ -1,10 +1,20 @@
+0.08    2016-11-04/20/
+
+* add xiangci part couter function maixiang().
 
 0.07    2016-10-10/15/
-        some changes of inner functions 
+
+* some changes of inner functions 
+
 0.05    2016-10-08/16/
-        Add a array  storage YI data to avoid only can  access one info once.
+ 
+* Add a array  storage YI data to avoid only can  access one info once.
+
 0.03    2016-09-24/22
-        Add YIdb to module's _DATA_ 
+
+* Add YIdb to module's _DATA_ 
+
 0.01    2016-09-24/15
-        First version, released on an unsuspecting world.
+        
+* First version, released on an unsuspecting world.
 
