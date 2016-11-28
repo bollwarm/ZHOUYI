@@ -7,7 +7,7 @@ use warnings;
 
 our @ISA    = qw(Exporter);
 our @EXPORT = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao maixiang);
-
+=encoding utf8
 =head1 NAME
 
 ZHOUYI - The ZHOUYI is module interpreter and outer the Chinese ancient
@@ -23,9 +23,6 @@ our $VERSION = '0.09';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
 
     use ZHOUYI;
 
@@ -35,11 +32,29 @@ Perhaps a little code snippet.
 
 =head1 EXPORT
 
+ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao maixiang
+
 A list of functions that can be exported.  You can delete this section
 if you don't export anything, such as for a purely object-oriented module.
 
 
 =head1 SUBROUTINES/METHODS
+
+=head2 ZHouYiEx
+
+return YI info
+
+=head2 ZYindex
+
+return YI index of 1~81 gua.
+
+=head2 outGua outtuan sixyao outxiang
+
+return special  gua's info of 卦体，爻,彖传，象辞.
+
+=head2 maixyao maixiang
+
+return special yao's info of 爻,象辞, and the it's array. 
 
 =cut
 
