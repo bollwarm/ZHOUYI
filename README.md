@@ -9,7 +9,6 @@
 先安装模块，然后
 
     use ZHOUYI;
-    use utf8
     binmode STDOUT, ":utf8";
 
     my ( $num1, $mum2 )=@ARGV;
