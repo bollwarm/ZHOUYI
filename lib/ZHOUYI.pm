@@ -1,7 +1,6 @@
 package ZHOUYI;
-
-require Exporter;
 use utf8;
+require Exporter;
 use strict;
 use warnings;
 
@@ -15,11 +14,11 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
-Version 0.010
+Version 0.011
 
 =cut
 
-our $VERSION = '0.010';
+our $VERSION = '0.011';
 
 =head1 SYNOPSIS
 
@@ -252,8 +251,7 @@ L<http://search.cpan.org/dist/ZHOUYI/>
 
 Copyright 2016 orange.
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of the the Artistic License (2.0). 
+This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
 =cut
 

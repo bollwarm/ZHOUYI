@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR           => q{orange <linzhe@ijz.me>},
     VERSION_FROM     => 'lib/ZHOUYI.pm',
     ABSTRACT_FROM    => 'lib/ZHOUYI.pm',
-    LICENSE          => 'artistic_2',
+    LICENSE          => 'Perl',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
