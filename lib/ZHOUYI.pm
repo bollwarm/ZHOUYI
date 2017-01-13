@@ -6,6 +6,7 @@ use warnings;
 
 our @ISA    = qw(Exporter);
 our @EXPORT = qw(ZhouyiEx ZYindex outGua sixyao outtuan outxiang maixyao maixiang);
+
 =encoding utf8
 =head1 NAME
 
@@ -14,11 +15,11 @@ philosophy of The Book of Change(易经);
 
 =head1 VERSION
 
-Version 0.011
+Version 0.11
 
 =cut
 
-our $VERSION = '0.011';
+our $VERSION = '0.11';
 
 =head1 SYNOPSIS
 
@@ -58,6 +59,7 @@ return special yao's info of 爻,象辞, and the it's array.
 =cut
 
 my ( $ZYdb, @ZYdb );
+
 @ZYdb = <DATA>;
 $ZYdb .= $_ for @ZYdb;
 
@@ -82,7 +84,6 @@ sub Bindex {
 
         if (/^\d$/) {
 
-            #print $_,"\n";
             $yi{$_} = $bagua1[0] . "_" . $bagua1[$_];
 
         }
@@ -210,8 +211,6 @@ orange, C<< <bollwarm at ijz.me> >>
 Please report any bugs or feature requests to C<bug-zhouyi at rt.cpan.org>, or through
 the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=ZHOUYI>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
-
-
 
 
 =head1 SUPPORT

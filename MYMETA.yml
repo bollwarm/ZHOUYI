@@ -1,0 +1,22 @@
+---
+abstract: 'The ZHOUYI is module interpreter and outer the Chinese ancient philosophy of The Book of Change(易经);'
+author:
+  - 'orange <linzhe@ijz.me>'
+build_requires:
+  Test::More: '0'
+configure_requires:
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 7.16, CPAN::Meta::Converter version 2.143240'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: ZHOUYI
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  perl: '5.006'
+version: '0.11'
