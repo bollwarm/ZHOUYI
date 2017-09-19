@@ -1,9 +1,11 @@
-##介绍
+
+
+## 介绍
 
 周易解析和规范输出，输出两个数字（下卦和上卦）对应解析到周易中的一卦，
 并分部分输出主卦，六爻，彖辞，象传部分。可以来进行初步卦卜。
 
-##安装及使用
+## 安装及使用
 
 具体使用方法，见example
 先安装模块，然后
@@ -71,7 +73,7 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
 
     插件example/Pu.pm（关于Mojo::webqq详见 https://github.com/sjdy521/Mojo-Webqq）
 
-   ![成功预测美帝大选](example/zhanpu.jpg)
+   ![成功预测美帝大选](example/zhanbu.jpg)
 
   
    如上图图显示预测提前两天预测到美国大选明主党候选人：
@@ -136,7 +138,7 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
  
     [orange](bollwarm@ijz.me), [虫虫之家Blog](http://ijz.me)
 
-## COPYRIGHT AND LICENSE
+## COPYRIGHT AND LICEE
  
 Copyright (C) 2016 桔子
  
