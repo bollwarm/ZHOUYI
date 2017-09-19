@@ -1,10 +1,15 @@
-Revision history for ZHOUYI-ZhanPu
+Revision history for ZHOUYI
 
-0.011    2016-12-07/18/
+
+0.12    2017-09-19/14/
+
+* merge ZHOUYI::Zhanbu 
+
+0.11    2016-12-07/18/
 
 * some optimize
 
-0.010    2016-11-07/18/
+0.10    2016-11-07/18/
 
 * add functon explain and fix docs.
 
