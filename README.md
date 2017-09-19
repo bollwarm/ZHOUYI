@@ -93,7 +93,7 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
      履，履虎尾，不咥人，亨。
 
 
-###===六爻==
+### ===六爻==
 
      《易經》第十卦履天澤履乾上兌下
      
@@ -106,7 +106,7 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
      九五：夬履，貞厲。
      上九：視履考祥，其旋元吉。
 
-###===彖辞==
+### ===彖辞==
     
     《易經》第十卦履天澤履乾上兌下
     
@@ -114,7 +114,7 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
     
     《彖》曰：履，柔履剛也。說而應乎乾，是以「履虎尾，不咥人，亨」。剛中正，履帝位而不疚，光明也。
 
-###===象传==
+### ===象传==
     
     《易經》第十卦履天澤履乾上兌下
     
