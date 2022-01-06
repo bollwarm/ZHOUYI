@@ -105,11 +105,11 @@ ZHUYI::ZhanBu (周易占卜) - A util of ZHOUYI modules，divination to judge fo
  
 ##### You can using in oneline as you like:
 
-    $ perl -MZHOUYI::ZhanBu  -pe 'jiegua(qigua())'
+     $perl -MZHOUYI::ZhanBu  -e 'print jiegua(qigua())'
     
  #or just use:  
     
-     $ perl -MZHOUYI::ZhanBu -pe 'print pu()'
+     $perl -MZHOUYI::ZhanBu -e 'print pu()'
 
 ### 利用Mojo::webqq插件形式交互式占卜。
 
